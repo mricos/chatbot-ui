@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "mkdocs/site/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/$1.html" }
+  ]
+}
+
