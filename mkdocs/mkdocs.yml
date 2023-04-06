@@ -1,0 +1,9 @@
+site_name: chatholder 
+#theme: readthedocs
+theme: material
+
+nav:
+  - Home: index.md
+  - Vercel:
+      - Logs: vercel/logs.md
+
