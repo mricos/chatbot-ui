@@ -4,7 +4,15 @@
     { "src": "mkdocs/site/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/$1.html" }
-  ]
+    { "src": "/(.*)\.html", "dest": "/$1.html" },
+    { "src": "/(.*)", "dest": "/$1/index.html" }
+  ],
+  "static": {
+    "rewrites": [
+      { "source": "/assets/(.*)", "destination": "/mkdocs/site/assets/$1" },
+      { "source": "/js/(.*)", "destination": "/mkdocs/site/js/$1" },
+      { "source": "/css/(.*)", "destination": "/mkdocs/site/css/$1" }
+    ]
+  }
 }
 
